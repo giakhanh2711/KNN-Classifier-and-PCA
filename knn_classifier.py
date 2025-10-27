@@ -65,7 +65,7 @@ class KNNClassifier:
                                                         X_val_kf, Y_val_kf, n_component=n_component)
                 errors_k.append(count_error)
             
-            error_rates.append(np.average(errors_k)/Y_val_kf.shape[0])
+            error_rates.append(np.sum(errors_k)/Y.shape[0])
         return error_rates
     
 
